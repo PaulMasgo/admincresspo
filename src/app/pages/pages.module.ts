@@ -10,6 +10,7 @@ import { IncrementadorComponent } from '../components/incrementador/incrementado
 import {ChartsModule } from "ng2-charts"
 import { GraficodonaComponent } from '../components/graficodona/graficodona.component';
 import { CommonModule } from '@angular/common';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 
 
@@ -20,7 +21,8 @@ import { CommonModule } from '@angular/common';
         Graficas1Component,
         PagesComponent,
         IncrementadorComponent,
-        GraficodonaComponent
+        GraficodonaComponent,
+        AccountSettingsComponent
     ],
     exports:[
         DashboardComponent,

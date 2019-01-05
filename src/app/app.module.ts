@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { ServiceModule } from "./services/service.module";
 import { NgModule } from '@angular/core';
 
 //Rutaas
@@ -11,6 +12,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register/register.component';
 import { FormsModule } from '@angular/forms';
+import { Services } from '@angular/core/src/view';
+
 
 
 @NgModule({
@@ -23,9 +26,10 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     APP_ROUTES,
     pagesModule,
-    FormsModule
+    FormsModule,
+    ServiceModule,
   ],
-  providers: [],
+providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
