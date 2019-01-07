@@ -11,7 +11,7 @@ import { pagesModule } from "./pages/pages.module";
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register/register.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Services } from '@angular/core/src/view';
 
 
@@ -28,6 +28,7 @@ import { Services } from '@angular/core/src/view';
     pagesModule,
     FormsModule,
     ServiceModule,
+    ReactiveFormsModule
   ],
 providers: [],
   bootstrap: [AppComponent]
