@@ -26,6 +26,11 @@ export class LoginComponent implements OnInit {
     if(this.email.length >1){
       this.recuerdame = true
     }
+
+    if (this._usuarioService.token.length > 5) {
+
+      this.router.navigate(['/dashboard']);
+}
   }
 
 

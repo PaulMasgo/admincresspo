@@ -3,17 +3,48 @@ import { Usuario } from '../../models/usuario.models';
 import { HttpClient } from '@angular/common/http';
 import { URL_SERVICIOS } from 'src/app/config/config';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
+  
+  usuario:Usuario;
+  token:string='';
 
-  constructor(public http:HttpClient) {
-    console.log('Servicio listo para usarse');
+  constructor(public http:HttpClient,public router:Router) {
+      this.cargarStorage();
    }
 
+
+   estaLogeado(){
+     if(this.token.length>5){
+      return true
+     }
+      return false
+   }
+
+  cargarStorage(){
+    if(localStorage.getItem('token')){
+      this.token = localStorage.getItem('token');
+      this.usuario = JSON.parse(localStorage.getItem('usuario'));
+    }else{
+      this.token =''
+      this.usuario = null
+    }
+  }  
+
+  logout(){
+     this.usuario = null,
+     this.token = '',
+      localStorage.removeItem('token')
+      localStorage.removeItem('usuario')
+
+      this.router.navigate(['/login']);
+  }
+   
    login(usuario:Usuario,recordar:boolean=false){
       
       if(recordar){
@@ -29,7 +60,10 @@ export class UsuarioService {
          localStorage.setItem('id',resp.id);
          localStorage.setItem('token',resp.token);
          localStorage.setItem('usuario',JSON.stringify(resp.usuario));
-        
+         
+         this.usuario = resp.usuario;
+         this.token = resp.token ;
+
          return true;
       }));
    }
