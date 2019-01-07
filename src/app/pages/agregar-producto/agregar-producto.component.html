@@ -1,3 +1,70 @@
-<p>
-  agregar-producto works!
-</p>
+<div class="card-body">
+    <form action="#" class="form-horizontal form-bordered">
+        <div class="form-body">
+            <div class="form-group row">
+                <label class="control-label text-right col-md-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nombre del producto</font></font></label>
+                <div class="col-md-9">
+                    <input #nombre type="text" placeholder="Ingrese el nombre" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label text-right col-md-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Descripcion</font></font></label>
+                <div class="col-md-9">
+                    <input #descripcion type="text" placeholder="Ingrese la descripcion" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label text-right col-md-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Descripcion</font></font></label>
+                <div class="col-md-9">
+                    <input #precio type="number" placeholder="Ingrese el precio" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label text-right col-md-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Elija una Categoria</font></font></label>
+                <div class="col-md-9">
+                    <select class="form-control custom-select" name="opciones" (change)="print($event.target.value)">
+                        <option   value="elija una opcion" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Seleccione una opcion...</font></font></option>
+                        <option  *ngFor="let item of categoria" [value]="item._id" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{item.nombre}}</font></font></option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label text-right col-md-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Imagen Principal</font></font></label>
+                <div class="col-md-9">
+                    <input #principal type="text" placeholder="Ingrese la URL" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label text-right col-md-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lado 1</font></font></label>
+                <div class="col-md-9">
+                    <input #lado1 type="text" placeholder="Ingrese la URL" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label text-right col-md-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lado 2</font></font></label>
+                <div class="col-md-9">
+                    <input #lado2 type="text" placeholder="Ingrese la URL" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label text-right col-md-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lado 3</font></font></label>
+                <div class="col-md-9">
+                    <input #lado3 type="text" placeholder="Ingrese la URL" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="form-actions">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="offset-sm-3 col-md-9">
+                            <button type="button" class="btn btn-success" (click)="llenarProducto(nombre.value,descripcion.value,precio.value,principal.value,lado1.value,lado2.value,lado3.value)">
+                                 <i class="fa fa-check"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Enviar</font></font></button>
+                            <button type="button" class="btn btn-inverse"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cancelar</font></font></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

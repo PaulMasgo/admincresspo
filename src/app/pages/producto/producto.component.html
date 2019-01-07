@@ -39,7 +39,7 @@
                             <td>{{producto.categoria.nombre}}</td>
                             <td><img [src]="producto.imagen.principal" class="img-50 img-circle"></td>
                             <td>
-                                <button class="btn btn-primary">
+                                <button class="btn btn-primary" [routerLink]="['/producto',producto._id]">
                                 <i class="fa fa-eye"></i>
                               </button>
                                 <button class="btn btn-primary">

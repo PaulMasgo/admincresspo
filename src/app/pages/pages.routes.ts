@@ -10,6 +10,7 @@ import { LoginGuardGuard } from '../services/services.index';
 import { PerfilComponent } from './perfil/perfil.component';
 import { ProductoComponent } from './producto/producto.component';
 import { AgregarProductoComponent } from './agregar-producto/agregar-producto.component';
+import { VerComponent } from './ver/ver.component';
 
 const pagesRoutes:Routes =[
     {
@@ -25,6 +26,7 @@ const pagesRoutes:Routes =[
         {path:'promesas',component:PromesasComponent,data:{titulo:'Promesas'}},
         {path:'rxjs',component:RxjsComponent,data:{titulo:'Rxjs'}},
         {path:'productos',component:ProductoComponent,data:{titulo:'Productos'}},
+        {path:'producto/:id',component:VerComponent,data:{titulo:'Ver Producto'}},
         {path:'addProduct',component:AgregarProductoComponent,data:{titulo:'Agregar Producto'}},
         {path:'',redirectTo:'/dashboard',pathMatch:'full',data:{titulo:'Dashboard'}}
     ]},

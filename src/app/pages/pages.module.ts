@@ -17,6 +17,7 @@ import { PipesModule } from '../pipes/pipes.module';
 import { PerfilComponent } from './perfil/perfil.component';
 import { ProductoComponent } from './producto/producto.component';
 import { AgregarProductoComponent } from './agregar-producto/agregar-producto.component';
+import { VerComponent } from './ver/ver.component';
 
 
 
@@ -33,7 +34,8 @@ import { AgregarProductoComponent } from './agregar-producto/agregar-producto.co
         RxjsComponent,
         PerfilComponent,
         ProductoComponent,
-        AgregarProductoComponent
+        AgregarProductoComponent,
+        VerComponent
     ],
     exports:[
         DashboardComponent,
