@@ -7,6 +7,9 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { LoginGuardGuard } from '../services/services.index';
+import { PerfilComponent } from './perfil/perfil.component';
+import { ProductoComponent } from './producto/producto.component';
+import { AgregarProductoComponent } from './agregar-producto/agregar-producto.component';
 
 const pagesRoutes:Routes =[
     {
@@ -18,8 +21,11 @@ const pagesRoutes:Routes =[
         {path:'progress',component:ProgressComponent ,data:{titulo:'Progress'}},
         {path:'graficas1',component:Graficas1Component,data:{titulo:'Graficos'}},
         {path:'acount-settings',component:AccountSettingsComponent,data:{titulo:'Configuracion'}},
+        {path:'perfil',component:PerfilComponent,data:{titulo:'Mi perfil'}},
         {path:'promesas',component:PromesasComponent,data:{titulo:'Promesas'}},
         {path:'rxjs',component:RxjsComponent,data:{titulo:'Rxjs'}},
+        {path:'productos',component:ProductoComponent,data:{titulo:'Productos'}},
+        {path:'addProduct',component:AgregarProductoComponent,data:{titulo:'Agregar Producto'}},
         {path:'',redirectTo:'/dashboard',pathMatch:'full',data:{titulo:'Dashboard'}}
     ]},
 ];

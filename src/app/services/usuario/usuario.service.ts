@@ -53,7 +53,7 @@ export class UsuarioService {
         localStorage.removeItem('email');
       }
 
-      let url =URL_SERVICIOS + '/login';
+      let url = URL_SERVICIOS + '/login';
       return this.http.post(url,usuario)
       .pipe(map((resp:any)=>{
          
@@ -78,7 +78,7 @@ export class UsuarioService {
       }));
    };
 
-
+  
 
 
 }

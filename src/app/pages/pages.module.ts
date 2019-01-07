@@ -13,6 +13,10 @@ import { CommonModule } from '@angular/common';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { PipesModule } from '../pipes/pipes.module';
+import { PerfilComponent } from './perfil/perfil.component';
+import { ProductoComponent } from './producto/producto.component';
+import { AgregarProductoComponent } from './agregar-producto/agregar-producto.component';
 
 
 
@@ -26,7 +30,10 @@ import { RxjsComponent } from './rxjs/rxjs.component';
         GraficodonaComponent,
         AccountSettingsComponent,
         PromesasComponent,
-        RxjsComponent
+        RxjsComponent,
+        PerfilComponent,
+        ProductoComponent,
+        AgregarProductoComponent
     ],
     exports:[
         DashboardComponent,
@@ -38,7 +45,8 @@ import { RxjsComponent } from './rxjs/rxjs.component';
         PAGES_ROUTES,
         FormsModule,
         ChartsModule,
-        CommonModule
+        CommonModule,
+        PipesModule
     ]
 })
 

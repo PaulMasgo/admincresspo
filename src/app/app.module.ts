@@ -20,7 +20,7 @@ import { Services } from '@angular/core/src/view';
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

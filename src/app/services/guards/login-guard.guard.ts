@@ -12,7 +12,7 @@ constructor(public _usuarioService:UsuarioService,public router:Router){
   
 }
 
-canActivate(){
+ canActivate(){
 
   if(this._usuarioService.estaLogeado()){
     console.log('Paso por el login Guard');
